@@ -14,6 +14,11 @@
   color: #00003c;
 }
 
+.container h2:hover {
+  transition: 0.2s;
+  color: #ff0000;
+}
+
 .calendarBox {
   width: 100%;
   max-width: 100%;

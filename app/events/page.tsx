@@ -34,8 +34,8 @@ export default function EventList() {
                     `}</style>
                     <Link href={`/events/${event.id}`} passHref>
                       <p style={{ fontWeight: 'bold', fontSize: '1.2em' }}>
-                        {event.homeTeam && event.homeTeam.name} -{' '}
-                        {event.awayTeam && event.awayTeam.name}
+                        {event.homeTeam?.name || 'N/A'} -{' '}
+                        {event.awayTeam?.name || 'N/A'}
                       </p>
                     </Link>
                   </div>
