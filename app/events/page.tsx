@@ -15,7 +15,7 @@ export default function EventList() {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>Upcoming Events</h2>
       <div className={styles.calendarBox}>
         <Calendar
@@ -24,12 +24,17 @@ export default function EventList() {
             const events = getEventsByDate(sportData, dateKey);
 
             return (
-              <div className={styles.calendarBox}>
+              <div className={styles.dateBox}>
                 {events.map((event, index) => (
                   <div key={index} className={styles.eventLink}>
+                    <style jsx>{`
+                      p:hover {
+                        color: #ff0000;
+                      }
+                    `}</style>
                     <Link href={`/events/${event.id}`} passHref>
-                      <p>
-                        {event.homeTeam && event.homeTeam.name} vs{' '}
+                      <p style={{ fontWeight: 'bold', fontSize: '1.2em' }}>
+                        {event.homeTeam && event.homeTeam.name} -{' '}
                         {event.awayTeam && event.awayTeam.name}
                       </p>
                     </Link>
@@ -41,7 +46,12 @@ export default function EventList() {
           tileClassName={styles.sameSizeDateBox}
         />
       </div>
-      <AddEventForm onAddEvent={handleAddEvent} />
+      <div className={styles.newEvent}>
+        <h2>Add New Event</h2>
+        <div>
+          <AddEventForm onAddEvent={handleAddEvent} />
+        </div>
+      </div>
     </div>
   );
 }

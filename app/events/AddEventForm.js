@@ -23,7 +23,6 @@ const AddEventForm = ({ onAddEvent }) => {
 
   return (
     <div>
-      <h3>Add New Event:</h3>
       <label>
         Home Team:
         <input
@@ -33,6 +32,7 @@ const AddEventForm = ({ onAddEvent }) => {
           onChange={handleInputChange}
         />
       </label>
+      <br />
       <label>
         Away Team:
         <input
@@ -42,6 +42,7 @@ const AddEventForm = ({ onAddEvent }) => {
           onChange={handleInputChange}
         />
       </label>
+      <br />
       <label>
         Date Venue:
         <input
@@ -51,6 +52,7 @@ const AddEventForm = ({ onAddEvent }) => {
           onChange={handleInputChange}
         />
       </label>
+      <br />
       <button onClick={handleAddEvent}>Add Event</button>
     </div>
   );

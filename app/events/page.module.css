@@ -1,7 +1,33 @@
+.container {
+  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.container h2 {
+  padding-top: 3em;
+  font-size: 44px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #00003c;
+}
+
 .calendarBox {
   width: 100%;
-  max-width: 140ch;
+  max-width: 100%;
+  max-height: 80%;
   margin: 0 auto;
+  text-align: center;
+}
+
+.dateBox {
+  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .sameSizeDateBox {
@@ -25,4 +51,13 @@
   .calendarBox {
     max-width: 100%;
   }
+}
+
+.newEvent {
+  padding-top: 2em;
+  padding-bottom: 10em;
+}
+
+.newEvent p {
+  padding-top: 2em;
 }
