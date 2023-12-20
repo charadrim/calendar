@@ -39,11 +39,11 @@ export default function RootLayout({
               <div>
                 <div className={styles.navigationLinks}>
                   <Link href="https://investors.sportradar.com/">Overview</Link>
-                  <Link href="/">Calendar</Link>
+                  <Link href="/events">Events</Link>
                 </div>
               </div>
             </div>
-            <div className={styles.headingContainer}>CALENDAR</div>
+            <div className={styles.headingContainer}>Events</div>
           </div>
           <div>{children}</div>
         </div>
