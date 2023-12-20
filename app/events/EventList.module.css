@@ -1,0 +1,28 @@
+.calendarBox {
+  width: 100%;
+  max-width: 140ch;
+  margin: 0 auto;
+}
+
+.sameSizeDateBox {
+  height: 20ch;
+  min-height: 20ch;
+  width: 20ch;
+  min-width: 20ch;
+}
+
+.react-calendar__month-view__weekdays {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1ch;
+}
+
+@media (max-width: 767px) {
+  .calendarBox {
+    max-width: 100%;
+  }
+
+  .calendarBox {
+    max-width: 100%;
+  }
+}

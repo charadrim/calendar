@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import { Source_Sans_3 } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './layout.module.css';
 import Logo from './logo/Logo';
+import styles from './page.module.css';
 
 const inter = Source_Sans_3({ subsets: ['latin'] });
 
@@ -43,6 +43,7 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
+            <div className={styles.headingContainer}>CALENDAR</div>
           </div>
           <div>{children}</div>
         </div>
