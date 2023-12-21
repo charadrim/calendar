@@ -43,7 +43,9 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
-            <div className={styles.headingContainer}>Events</div>
+            <div className={styles.headingContainer}>
+              <h1>Events</h1>
+            </div>
           </div>
           <div>{children}</div>
         </div>

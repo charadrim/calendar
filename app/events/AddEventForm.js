@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './page.module.css';
 
 const AddEventForm = ({ onAddEvent }) => {
   const [newEvent, setNewEvent] = useState({
@@ -22,38 +23,45 @@ const AddEventForm = ({ onAddEvent }) => {
   };
 
   return (
-    <div>
-      <label>
-        Home Team:
-        <input
-          type="text"
-          name="homeTeam"
-          value={newEvent.homeTeam}
-          onChange={handleInputChange}
-        />
-      </label>
-      <br />
-      <label>
-        Away Team:
-        <input
-          type="text"
-          name="awayTeam"
-          value={newEvent.awayTeam}
-          onChange={handleInputChange}
-        />
-      </label>
-      <br />
-      <label>
-        Date Venue:
-        <input
-          type="date"
-          name="dateVenue"
-          value={newEvent.dateVenue}
-          onChange={handleInputChange}
-        />
-      </label>
-      <br />
-      <button onClick={handleAddEvent}>Add Event</button>
+    <div className={styles.newEventBox}>
+      <div className={styles.newEventDetails}>
+        <label>
+          <div>Home Team:</div>
+
+          <input
+            type="text"
+            name="homeTeam"
+            value={newEvent.homeTeam}
+            onChange={handleInputChange}
+          />
+        </label>
+      </div>
+      <div className={styles.newEventDetails}>
+        <label>
+          <div>Away Team:</div>
+
+          <input
+            type="text"
+            name="awayTeam"
+            value={newEvent.awayTeam}
+            onChange={handleInputChange}
+          />
+        </label>
+      </div>
+      <div className={styles.newEventDetails}>
+        <label>
+          <div>Date Venue:</div>
+          <input
+            type="date"
+            name="dateVenue"
+            value={newEvent.dateVenue}
+            onChange={handleInputChange}
+          />
+        </label>
+      </div>
+      <div className={styles.newEventDetails}>
+        <button onClick={handleAddEvent}>Add Event</button>
+      </div>
     </div>
   );
 };

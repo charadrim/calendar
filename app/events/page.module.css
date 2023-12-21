@@ -6,16 +6,16 @@
   text-align: left;
 }
 
-.container h2 {
+.container h1 {
   padding-top: 3em;
-  font-size: 44px;
+  font-size: 2.75em;
   font-weight: 900;
   text-transform: uppercase;
   color: #00003c;
+  transition: color 0.2s;
 }
 
-.container h2:hover {
-  transition: 0.2s;
+.container h1:hover {
   color: #ff0000;
 }
 
@@ -36,33 +36,79 @@
 }
 
 .sameSizeDateBox {
-  height: 20ch;
-  min-height: 20ch;
-  width: 20ch;
-  min-width: 20ch;
+  height: 10em;
+  min-height: 10em;
+  width: 10em;
+  min-width: 10em;
 }
 
 .react-calendar__month-view__weekdays {
   display: flex;
   justify-content: center;
-  margin-bottom: 1ch;
-}
-
-@media (max-width: 767px) {
-  .calendarBox {
-    max-width: 100%;
-  }
-
-  .calendarBox {
-    max-width: 100%;
-  }
+  margin-bottom: 1em;
 }
 
 .newEvent {
-  padding-top: 2em;
-  padding-bottom: 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.newEvent h2 {
+  padding-top: 1em;
+  font-size: 2.75em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #00003c;
+}
+.newEvent h2:hover {
+  transition: 0.2s;
+  color: #ff0000;
 }
 
 .newEvent p {
-  padding-top: 2em;
+  padding-top: 1em;
+}
+
+.newEventDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.newEventDetails label {
+  margin-right: 1em;
+}
+
+.newEventDetails input {
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .calendarBox,
+  .dateBox {
+    max-width: 100%;
+  }
+
+  .container h1 {
+    padding-top: 1em;
+    font-size: 2em;
+  }
+
+  .sameSizeDateBox {
+    height: 8em;
+    min-height: 8em;
+    width: 8em;
+    min-width: 8em;
+  }
+
+  .newEvent {
+    padding-top: 1em;
+    padding-bottom: 5em;
+  }
+
+  .newEvent h2 {
+    padding-top: 1em;
+    font-size: 2em;
+  }
 }

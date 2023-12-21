@@ -14,9 +14,16 @@ export default function EventList() {
     setSportData((prevSportData) => [...prevSportData, newEvent]);
   };
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const linkStyle = {
+    fontWeight: 'bold',
+    fontSize: '1.2em',
+  };
+
   return (
     <div className={styles.container}>
-      <h2>Upcoming Events</h2>
+      <h1>Upcoming Events</h1>
       <div className={styles.calendarBox}>
         <Calendar
           tileContent={({ date }) => {
@@ -27,13 +34,8 @@ export default function EventList() {
               <div className={styles.dateBox}>
                 {events.map((event, index) => (
                   <div key={index} className={styles.eventLink}>
-                    <style jsx>{`
-                      p:hover {
-                        color: #ff0000;
-                      }
-                    `}</style>
                     <Link href={`/events/${event.id}`} passHref>
-                      <p style={{ fontWeight: 'bold', fontSize: '1.2em' }}>
+                      <p style={linkStyle}>
                         {event.homeTeam?.name || 'N/A'} -{' '}
                         {event.awayTeam?.name || 'N/A'}
                       </p>
