@@ -24,32 +24,30 @@ const AddEventForm = ({ onAddEvent }) => {
 
   return (
     <div className={styles.newEventBox}>
-      <div className={styles.newEventDetails}>
-        <label>
+      <label>
+        <div className={styles.newEventDetails}>
           <div>Home Team:</div>
-
           <input
             type="text"
             name="homeTeam"
             value={newEvent.homeTeam}
             onChange={handleInputChange}
           />
-        </label>
-      </div>
-      <div className={styles.newEventDetails}>
-        <label>
+        </div>
+      </label>
+      <label>
+        <div className={styles.newEventDetails}>
           <div>Away Team:</div>
-
           <input
             type="text"
             name="awayTeam"
             value={newEvent.awayTeam}
             onChange={handleInputChange}
           />
-        </label>
-      </div>
-      <div className={styles.newEventDetails}>
-        <label>
+        </div>
+      </label>
+      <label>
+        <div className={styles.newEventDetails}>
           <div>Date Venue:</div>
           <input
             type="date"
@@ -57,10 +55,12 @@ const AddEventForm = ({ onAddEvent }) => {
             value={newEvent.dateVenue}
             onChange={handleInputChange}
           />
-        </label>
-      </div>
+        </div>
+      </label>
       <div className={styles.newEventDetails}>
-        <button onClick={handleAddEvent}>Add Event</button>
+        <button className={styles.addEventButton} onClick={handleAddEvent}>
+          Add Event
+        </button>
       </div>
     </div>
   );

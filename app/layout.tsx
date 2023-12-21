@@ -38,8 +38,14 @@ export default function RootLayout({
               </div>
               <div>
                 <div className={styles.navigationLinks}>
-                  <Link href="https://investors.sportradar.com/">Overview</Link>
-                  <Link href="/events">Events</Link>
+                  <div className={styles.navigationLink}>
+                    <Link href="https://investors.sportradar.com/">
+                      Overview
+                    </Link>
+                  </div>
+                  <div className={styles.navigationLink}>
+                    <Link href="/events">Events</Link>
+                  </div>
                 </div>
               </div>
             </div>

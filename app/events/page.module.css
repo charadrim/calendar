@@ -52,21 +52,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-bottom: 4em;
 }
 .newEvent h2 {
   padding-top: 1em;
-  font-size: 2.75em;
+  font-size: 2em;
   font-weight: 900;
   text-transform: uppercase;
   color: #00003c;
 }
-.newEvent h2:hover {
-  transition: 0.2s;
-  color: #ff0000;
-}
 
 .newEvent p {
   padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .newEventDetails {
@@ -76,12 +74,31 @@
   margin-top: 1em;
 }
 
-.newEventDetails label {
-  margin-right: 1em;
+.newEventDetails div {
+  margin-right: 0.5em;
+  font-weight: bold;
 }
 
 .newEventDetails input {
   flex: 1;
+}
+
+.addEventButton {
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.3em 0.6em;
+  margin: 0.3em;
+  border: none;
+  border-radius: 0.1em;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 0.9em;
+}
+
+.addEventButton:hover {
+  background-color: #f10000;
+  color: #fff;
 }
 
 @media (max-width: 767px) {

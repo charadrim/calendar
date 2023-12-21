@@ -32,10 +32,6 @@
   font-weight: 900;
   text-transform: uppercase;
   color: #00003c;
-  transition: color 0.2s;
-}
-.singleEventBox h2:hover {
-  color: #ff0000;
 }
 
 .singleEventCategory {
