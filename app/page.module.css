@@ -67,9 +67,9 @@
   text-align: center;
   padding: 1rem;
   font-size: 9rem;
-  font-weight: bold;
+  font-weight: bolder;
   letter-spacing: 0;
-  /* padding-left: 0.7em; */
+  text-transform: uppercase;
 }
 
 .navigationBar nav {
