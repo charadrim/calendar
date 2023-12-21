@@ -10,7 +10,7 @@ import jsonData from './sportData.json';
 export default function EventList() {
   const [sportData, setSportData] = useState(jsonData.data);
 
-  const handleAddEvent = (newEvent) => {
+  const handleAddEvent = (newEvent: any) => {
     setSportData((prevSportData) => [...prevSportData, newEvent]);
   };
 
@@ -32,7 +32,7 @@ export default function EventList() {
 
             return (
               <div className={styles.dateBox}>
-                {events.map((event, index) => (
+                {events.map((event: any, index: any) => (
                   <div key={index} className={styles.eventLink}>
                     <Link href={`/events/${event.id}`} passHref>
                       <p style={linkStyle}>
